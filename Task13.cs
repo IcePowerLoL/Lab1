@@ -27,7 +27,7 @@ namespace Lab1
         public static int rdm(int a, int b)
         {
             Random rand = new Random();
-            return rand.Next(a, b);
+            return rand.Next(a, b + 1);
         }
     }
 }

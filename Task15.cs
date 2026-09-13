@@ -9,16 +9,18 @@ namespace Lab1
             Console.Clear();
             Console.WriteLine("=== 15 Задание ===");
 
-            int ssize = 10;
-            int[] mas1 = new int[ssize];
+            Console.Write("Введите массив для сортировки: ");
+            string[] num = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            int[] mas1 = new int[num.Length];
+            Console.Clear();
 
-            for (int i = 0; i < ssize; i++)
+            for (int i = 0; i < num.Length; i++)
             {
-                mas1[i] = Task13.rdm(0, 100);
+                mas1[i] = int.Parse(num[i]);
             }
 
             Console.WriteLine("До сортировки");
-            for (int i = 0; i < ssize; i++)
+            for (int i = 0; i < num.Length; i++)
             {
                 Console.Write($"{mas1[i]} ");
             }
@@ -26,7 +28,7 @@ namespace Lab1
 
             sort(mas1);
             Console.WriteLine("После сортировки");
-            for (int i = 0;i < ssize; i++)
+            for (int i = 0;i < num.Length; i++)
             {
                 Console.Write($"{mas1[i]} ");
             }

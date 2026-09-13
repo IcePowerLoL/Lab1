@@ -18,7 +18,7 @@ namespace Lab1
                 {
                     Console.Write(8);
                 }
-                Console.WriteLine(' ');
+                Console.WriteLine();
             }
         }
     }

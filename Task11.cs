@@ -18,7 +18,7 @@ namespace Lab1
             {
                 for(int j = 0; j < cols; j++)
                 {
-                    mas[i, j] = rand.Next(10, 99);
+                    mas[i, j] = rand.Next(10, 100);
                 }
             }
 

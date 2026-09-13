@@ -41,24 +41,15 @@ namespace Lab1
                 }
                 mas2[i] = sum;
             }
-            int[] mas3 = mas2;
-            for(int i = 0; i < rows - 1; i++)
+            int MaxIndex = 0;
+            for(int i = 0; i < mas2.Length; i++)
             {
-                if(mas2[i] > mas2[i + 1])
+                if (mas2[i] > mas2[MaxIndex])
                 {
-                    mas2[i + 1] = mas2[i];
+                    MaxIndex = i;
                 }
             }
-            for(int i = 0; i < rows; i++)
-            {
-                if (mas2[rows - 1] == mas3[i])
-                {
-                    Console.Write("Строка с наибольшим по модулю произведением: ");
-                    Console.Write(i);
-                    Console.WriteLine(' ');
-                    return;
-                }
-            }
+            Console.Write($"Индекс строки с наибольшим по модулю произведением: {MaxIndex}");
         }
     }
 }
